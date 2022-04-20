@@ -1,0 +1,77 @@
+﻿<Window
+    x:Class="TestWindow.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:TestWindow"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Name="Main" Background="DimGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Name="TitleBar" Background="#60000000" />
+
+        <Grid
+            Grid.Row="1"
+            Width="500"
+            Height="150"
+            Background="#50000000"
+            CornerRadius="8">
+            <StackPanel
+                Margin="0,20,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Orientation="Horizontal"
+                Spacing="12">
+                <Button
+                    Name="Mica_Btn"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Click="Mica_Click"
+                    Content="Mica (False)" />
+                <Button
+                    Name="Acrylic_Btn"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Click="Acrylic_Click"
+                    Content="Acrylic (False)" />
+                <Button
+                    Name="Blur_Btn"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Click="Blur_Click"
+                    Content="Blur (False)" />
+                <Button
+                    Name="Solid_Btn"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Click="Solid_Click"
+                    Content="Solid (True)" />
+            </StackPanel>
+
+            <ToggleSwitch
+                Margin="28,60,0,0"
+                HorizontalContentAlignment="Center"
+                Header="Use Darkmode"
+                IsOn="{x:Bind UseDarkMode, Mode=TwoWay}"
+                Toggled="UseDarkMode_Toggled" />
+
+            <StackPanel
+                Margin="150,60,0,0"
+                VerticalAlignment="Center"
+                Orientation="Horizontal"
+                Spacing="12">
+
+                <Button Click="Dialog_Click" Content="Content Dialog" />
+                <Button Click="Maximize_Click" Content="Maximize" />
+                <Button Click="Normal_Click" Content="Normal" />
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+</Window>

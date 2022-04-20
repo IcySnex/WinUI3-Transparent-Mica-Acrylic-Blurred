@@ -1,0 +1,9 @@
+.vs/
+TestWindow/bin/
+TestWindow/obj/
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
