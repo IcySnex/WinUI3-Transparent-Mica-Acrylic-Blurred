@@ -1,3 +1,5 @@
+Note: No longer working since WndowsAppSDK 1.1-stable
+
 # WinUI3-Transparent-Mica-Acrylic-Blurred
  Fully working transparent/mica/acrylic/blurred window for WinUI3.
  
